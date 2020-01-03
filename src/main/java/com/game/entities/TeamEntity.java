@@ -42,10 +42,10 @@ public class TeamEntity {
 	@OneToMany(mappedBy = "team", fetch = FetchType.EAGER)
 	private List<PlayerEntity> players;
 	
-	@OneToMany(mappedBy = "homeTeam")
+	@OneToMany(mappedBy = "homeTeamId")
 	private List<MatchEntity> homeTeam;
 	
-	@OneToMany(mappedBy = "awayTeam")
+	@OneToMany(mappedBy = "awayTeamId")
 	private List<MatchEntity> awayTeam;
 
 	public long getId() {

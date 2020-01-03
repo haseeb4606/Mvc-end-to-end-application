@@ -21,17 +21,17 @@ public class MatchEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	@Column(name = "match_date")
-	private Date matchDate;
+	private String matchDate;
 	@Column(name = "match_location")
 	private String location;
 
 	@ManyToOne
 	@JoinColumn(name = "home_team_id")
-	private TeamEntity homeTeam;
+	private TeamEntity homeTeamId;
 
 	@ManyToOne
 	@JoinColumn(name = "away_team_id")
-	private TeamEntity awayTeam;
+	private TeamEntity awayTeamId;
 
 	public long getId() {
 		return id;
@@ -41,11 +41,11 @@ public class MatchEntity {
 		this.id = id;
 	}
 
-	public Date getMatchDate() {
+	public String getMatchDate() {
 		return matchDate;
 	}
 
-	public void setMatchDate(Date matchDate) {
+	public void setMatchDate(String matchDate) {
 		this.matchDate = matchDate;
 	}
 
@@ -57,20 +57,20 @@ public class MatchEntity {
 		this.location = location;
 	}
 
-	public TeamEntity getHomeTeam() {
-		return homeTeam;
+	public TeamEntity getHomeTeamId() {
+		return homeTeamId;
 	}
 
-	public void setHomeTeam(TeamEntity homeTeam) {
-		this.homeTeam = homeTeam;
+	public void setHomeTeamId(TeamEntity homeTeamId) {
+		this.homeTeamId = homeTeamId;
 	}
 
-	public TeamEntity getAwayTeam() {
-		return awayTeam;
+	public TeamEntity getAwayTeamId() {
+		return awayTeamId;
 	}
 
-	public void setAwayTeam(TeamEntity awayTeam) {
-		this.awayTeam = awayTeam;
+	public void setAwayTeamId(TeamEntity awayTeamId) {
+		this.awayTeamId = awayTeamId;
 	}
 
 }

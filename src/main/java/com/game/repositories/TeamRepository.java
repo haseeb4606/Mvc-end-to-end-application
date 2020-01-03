@@ -34,7 +34,7 @@ public class TeamRepository {
 
 	public TeamEntity getByCountry(String country) {
 
-		Query q = manager.createQuery("select t from EntityTeam where t.country =:country");
+		Query q = manager.createQuery("select t from TeamEntity t where t.country =:country");
 		q.setParameter("country", country);
 
 		return (TeamEntity) q.getSingleResult();

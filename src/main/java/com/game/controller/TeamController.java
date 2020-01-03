@@ -35,7 +35,7 @@ public class TeamController {
 		return teamService.getAllDatat();
 
 	}
-	@RequestMapping(value="/id/{id}", method = RequestMethod.GET)
+	@RequestMapping(value="/id={id}", method = RequestMethod.GET)
 	public TeamDto getTeamByid(@PathVariable long id) {
 		return teamService.getTeamById(id);
 	}

@@ -17,10 +17,12 @@ public class MatchController {
 	@Autowired
 	private MatchService service;
 	
-	@RequestMapping (value="id", method = RequestMethod.POST)
-	public void creatMatch(@RequestParam long id,@RequestBody MatchDto dto) {
+	@RequestMapping (value="", method = RequestMethod.POST)
+	public void creatMatch(@RequestBody MatchDto dto ) {
 		
-		service.createMatch(id, dto);
+		System.out.println(dto.toString());
+		
+		service.createMatch( dto);
 	}
 	
 	

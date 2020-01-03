@@ -6,13 +6,13 @@ public class MatchDto {
 
 	private long id;
 
-	private Date matchDate;
+	private String matchDate;
 
 	private String location;
-	
-	private long awayTeam;
-	
-	private long homeTeam;
+
+	private long awayTeamId;
+
+	private long homeTeamId;
 
 	public long getId() {
 		return id;
@@ -22,11 +22,11 @@ public class MatchDto {
 		this.id = id;
 	}
 
-	public Date getMatchDate() {
+	public String getMatchDate() {
 		return matchDate;
 	}
 
-	public void setMatchDate(Date matchDate) {
+	public void setMatchDate(String matchDate) {
 		this.matchDate = matchDate;
 	}
 
@@ -38,30 +38,26 @@ public class MatchDto {
 		this.location = location;
 	}
 
-	public long getAwayTeam() {
-		return awayTeam;
+	public long getAwayTeamId() {
+		return awayTeamId;
 	}
 
-	public void setAwayTeam(long awayTeam) {
-		this.awayTeam = awayTeam;
+	public void setAwayTeamId(long awayTeamId) {
+		this.awayTeamId = awayTeamId;
 	}
 
-	public long getHomeTeam() {
-		return homeTeam;
+	public long getHomeTeamId() {
+		return homeTeamId;
 	}
 
-	public void setHomeTeam(long homeTeam) {
-		this.homeTeam = homeTeam;
+	public void setHomeTeamId(long homeTeamId) {
+		this.homeTeamId = homeTeamId;
 	}
 
 	@Override
 	public String toString() {
-		return "MatchDto [id=" + id + ", matchDate=" + matchDate + ", location=" + location + ", awayTeam=" + awayTeam
-				+ ", homeTeam=" + homeTeam + "]";
+		return "MatchDto [id=" + id + ", matchDate=" + matchDate + ", location=" + location + ", awayTeamId="
+				+ awayTeamId + ", homeTeamId=" + homeTeamId + "]";
 	}
-	
-	
-
-	
 
 }
